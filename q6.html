@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT TASK-6</title>
+    </head>
+    <body>
+        Enter a string:
+        <input type="text" id="i1"/><br><br>
+        <input type="button" value="Reverse string" onclick="rev()"><br><br>
+        Output:
+        <div id="op"></div>
+        <script type="text/javascript">
+            function rev() {
+                var x = document.getElementById("i1").value;
+                if (x.length == 0 || !isNaN(x))
+                {
+                    document.getElementById("op").innerHTML ="";
+                    alert("Enter a string!");
+                }
+                else {
+                    var splitString = x.split("");
+                    var reverseArray = splitString.reverse();
+                    var joinArray = reverseArray.join(""); 
+                    document.getElementById("op").innerHTML = joinArray;
+                }
+            }
+        </script>
+    </body>
+</html>
